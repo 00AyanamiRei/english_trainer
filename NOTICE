@@ -1,0 +1,36 @@
+English Trainer
+Copyright (c) 2026 Maksym Kozlov
+
+This project's own source code is licensed under the MIT License (see LICENSE).
+
+THIRD-PARTY SOFTWARE
+This repository does NOT contain or redistribute any third-party code.
+The packages below are installed separately by the user (pip) and remain
+under their own licenses:
+
+PySide6 (Qt for Python) - LGPL-3.0 / GPL-3.0 / commercial https://pypi.org/project/PySide6/
+pyttsx3 - MPL-2.0 https://pypi.org/project/pyttsx3/
+gTTS (optional) - MIT https://pypi.org/project/gTTS/
+pytest (development) - MIT https://pypi.org/project/pytest/
+
+If you build and distribute a standalone executable that bundles PySide6,
+you must comply with the LGPL-3.0 terms for Qt (e.g. allow relinking and
+include the license text).
+
+EXTERNAL SERVICES (optional, accessed over the network; not part of this repo)
+LanguageTool public API - grammar checking https://languagetool.org/
+MyMemory - translation https://mymemory.translated.net/
+Ollama + local models - dialogue https://ollama.com/
+Google Translate TTS - speech (via gTTS; an unofficial, undocumented endpoint
+that may change, be rate-limited or blocked at any time)
+
+Published free-tier limits: LanguageTool public API - 20 requests/min, 75 KB/min, 20 KB per request,
+no automated requests; MyMemory anonymous - 5000 characters/day, 500 bytes per request.
+The app enforces stricter limits of its own before every call (see app/limits.py).
+Use of these services is subject to their own terms of service and rate
+limits. Text typed in the "Conversation" section may be sent to LanguageTool
+and MyMemory. Each language model downloaded through Ollama has its own license.
+
+DATA
+The irregular-verb table and the conversation topics were written for this
+project; no third-party datasets are included.
